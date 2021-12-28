@@ -1,0 +1,3 @@
+Try again later.
+Check your network connection.
+If you are connected but behind a firewall, check that Firefox has permission to access the Web.
