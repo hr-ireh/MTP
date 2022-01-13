@@ -19,8 +19,8 @@ public class FileProcessController {
 
     @PostMapping(value = "/v1/file/process",
             consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
-    public ResponseEntity<Void> uploadSingleFile(@RequestParam("file") MultipartFile file) {
-        fileProcessService.process(file);
-        return ResponseEntity.status(HttpStatus.OK).build();
+    public ResponseEntity<String> uploadSingleFile(@RequestParam("file") MultipartFile file) {
+        String process = fileProcessService.process(file);
+        return ResponseEntity.status(HttpStatus.OK).body(process);
     }
 }
